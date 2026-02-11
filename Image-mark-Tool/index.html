@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Image Watermark Tool | Image Mark Tool – Protect Your Images Online</title>
+    <meta name="description" content="Use Image Mark Tool – a free image watermark tool to add text or logo watermarks online. Protect your images instantly with high quality output.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <nav class="glass">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-copyright"></i> <span>Image Mark Tool</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div id="particle-container"></div>
+        <div class="container hero-content">
+            <h1>Free Image Watermark Tool – <br><span class="highlight">Protect Your Images Instantly</span></h1>
+            <p>Add text or logo watermarks to your photos in seconds. Professional, fast, and 100% private. All processing happens right in your browser.</p>
+            <div class="hero-btns">
+                <a href="#tool-section" class="btn btn-primary">Start Watermarking</a>
+                <a href="#how-it-works" class="btn btn-secondary">How It Works</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Tool Section -->
+    <section id="tool-section" class="tool-section">
+        <div class="container">
+            <div class="tool-grid glass">
+                <!-- Preview Panel -->
+                <div class="preview-panel">
+                    <div id="upload-area" class="upload-area">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Drag & Drop Image Here</h3>
+                        <p>or click to browse (PNG, JPG, WebP)</p>
+                        <input type="file" id="image-input" accept="image/*" hidden>
+                    </div>
+                    <div id="preview-container" class="preview-container" style="display: none;">
+                        <canvas id="main-canvas"></canvas>
+                    </div>
+                </div>
+
+                <!-- Controls Panel -->
+                <div class="controls-panel">
+                    <div class="control-group">
+                        <label>Watermark Type</label>
+                        <div class="type-toggle">
+                            <button id="text-type-btn" class="active">Text</button>
+                            <button id="image-type-btn">Logo/Image</button>
+                        </div>
+                    </div>
+
+                    <!-- Text Controls -->
+                    <div id="text-controls">
+                        <div class="control-group">
+                            <label>Watermark Text</label>
+                            <input type="text" id="watermark-text" value="Image Mark Tool">
+                        </div>
+                        <div class="control-row">
+                            <div class="control-group">
+                                <label>Font Size</label>
+                                <input type="number" id="font-size" value="40" min="10" max="500">
+                            </div>
+                            <div class="control-group">
+                                <label>Color</label>
+                                <input type="color" id="font-color" value="#ffffff">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Image Controls -->
+                    <div id="image-controls" style="display: none;">
+                        <div class="control-group">
+                            <label>Upload Logo</label>
+                            <div class="logo-upload-btn">
+                                <i class="fas fa-image"></i> Choose Logo
+                                <input type="file" id="logo-input" accept="image/*" hidden>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Opacity (<span id="opacity-val">0.5</span>)</label>
+                        <input type="range" id="opacity" min="0" max="1" step="0.1" value="0.5">
+                    </div>
+
+                    <div class="control-group">
+                        <label>Rotation (<span id="rotation-val">0</span>°)</label>
+                        <input type="range" id="rotation" min="-180" max="180" step="1" value="0">
+                    </div>
+
+                    <div class="control-group">
+                        <label>Position</label>
+                        <select id="position">
+                            <option value="center">Center</option>
+                            <option value="top-left">Top Left</option>
+                            <option value="top-right">Top Right</option>
+                            <option value="bottom-left">Bottom Left</option>
+                            <option value="bottom-right">Bottom Right</option>
+                        </select>
+                    </div>
+
+                    <div class="action-btns">
+                        <button id="download-btn" class="btn btn-primary" disabled>
+                            <i class="fas fa-download"></i> Download Image
+                        </button>
+                        <button id="reset-btn" class="btn btn-outline">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Content Section -->
+    <section class="seo-section">
+        <div class="container">
+            <h2>Why Use Our Free Image Watermark Tool?</h2>
+            <div class="seo-grid">
+                <div class="seo-text">
+                    <p>Protecting your visual assets has never been easier. Whether you're a professional photographer, a digital marketer, or a content creator, adding a watermark is the best way to prevent unauthorized use of your images. Our **Free Image Watermark Tool** provides a fast, secure, and intuitive way to add both text and image-based watermarks to your photos.</p>
+                    
+                    <h3>100% Browser-Based Security</h3>
+                    <p>Privacy is our priority. Unlike other online tools, we don't upload your images to any server. All the processing happens locally in your browser using modern web technologies. This means your private photos never leave your device.</p>
+
+                    <h3>Customizable Watermarking Options</h3>
+                    <p>Every image is different, which is why our tool offers deep customization. You can adjust the font size, color, opacity, and rotation of your text watermarks. Prefer a logo? Simply upload your PNG or JPG logo and position it exactly where you want it.</p>
+
+                    <h3>Usage Cases:</h3>
+                    <ul>
+                        <li><strong>Digital Marketing:</strong> Add brand logos to social media graphics.</li>
+                        <li><strong>Photographers:</strong> Protect high-resolution shots before client approval.</li>
+                        <li><strong>Bloggers:</strong> Ensure your unique blog images are credited back to you.</li>
+                        <li><strong>eCommerce:</strong> Secure product photos from being used by competitors.</li>
+                    </ul>
+
+                    <h3>Frequently Asked Questions (FAQs)</h3>
+                    <div class="faq-item">
+                        <h4>Is the Image Mark Tool really free?</h4>
+                        <p>Yes! Our tool is completely free to use with no hidden costs, subscriptions, or watermarks added by us.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Which image formats are supported?</h4>
+                        <p>We support all major formats including PNG, JPG, JPEG, and WebP.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Will the quality of my image decrease?</h4>
+                        <p>No, we process images at their original resolution to ensure high-quality output.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer glass">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo footer-logo">
+                    <i class="fas fa-copyright"></i> <span>Image Mark Tool</span>
+                </a>
+                <p>Pro-grade watermarking tool for everyone. Secure, private, and free.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Tools</h4>
+                <ul>
+                    <li><a href="#">Text Watermark</a></li>
+                    <li><a href="#">Image Watermark</a></li>
+                    <li><a href="#">Batch Processing (Soon)</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Image Mark Tool. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
